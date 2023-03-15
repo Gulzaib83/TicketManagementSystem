@@ -1,0 +1,28 @@
+﻿<Application x:Class="GUI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModels="clr-namespace:GUI.ViewModels"
+             xmlns:views="clr-namespace:GUI.Views"
+             xmlns:local="clr-namespace:GUI"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewModels:UsersViewModel}">
+            <views:Users/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:TicketsViewModel}">
+            <views:Tickets/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:RoutesViewModel}">
+            <views:Routes/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:AllUsersViewModel}">
+            <views:UsersList/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:AllTicketsViewModel}">
+            <views:TicketsList/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:AllRoutesViewModel}">
+            <views:RoutesList/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

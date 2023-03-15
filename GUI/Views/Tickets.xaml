@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="GUI.Views.Tickets"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="1" FontSize="36" HorizontalAlignment="Center" Content="Tickets"/>
+        <Label Grid.Row="3" Grid.Column="0" FontSize="36" HorizontalAlignment="Center" Content="Departure Date"/>
+        <DatePicker Name="dtDepartureDate" Grid.Row="3" Grid.Column="1" SelectedDate="{Binding Departure, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" DisplayDateStart="1/1/2023" DisplayDateEnd="12/31/2099" />
+        <Label Grid.Row="2" Grid.Column="0" FontSize="36" HorizontalAlignment="Center" Content="Arrival Date"/>
+        <DatePicker Name="dtArrivalDate" Grid.Row="2" Grid.Column="1" SelectedDate="{Binding Arrival, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" DisplayDateStart="1/1/2023" DisplayDateEnd="12/31/2099"/>
+        <Label Grid.Row="1" Grid.Column="0" FontSize="36" HorizontalAlignment="Center" Content="Travler's Name"/>
+        <TextBox Name="txtTravelerName" Grid.Row="1" Grid.Column="1" Text="{Binding TRAVLER_NAME, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+        <Label Grid.Row="4" Grid.Column="0" FontSize="36" HorizontalAlignment="Center" Content="Origin"/>
+        <TextBox Name="txtOrigin" Grid.Row="4" Grid.Column="1" Text="{Binding Origin, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+        <Label Grid.Row="5" Grid.Column="0" FontSize="36" HorizontalAlignment="Center" Content="Destination"/>
+        <TextBox Name="txtDestination" Grid.Row="5" Grid.Column="1" Text="{Binding Destination, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+        <Button Name="btnSave" Grid.Row="1" Grid.Column="2" Content="Save" Command="{Binding SaveTicketsCommand}"/>
+        <Button Name="btnRefresh" Grid.Row="2" Grid.Column="2" Content="Cancel"/>
+    </Grid>
+</UserControl>
