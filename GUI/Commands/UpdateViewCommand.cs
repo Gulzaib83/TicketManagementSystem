@@ -8,6 +8,10 @@ using System.Windows.Input;
 
 namespace GUI.Commands
 {
+    /// <summary>
+    /// This command is responsible for loading correct viewmodel and screen
+    /// All navigation between screens and viewmodels takes place here
+    /// </summary>
     public class UpdateViewCommand : ICommand
     {
         private MainViewModel viewModel;

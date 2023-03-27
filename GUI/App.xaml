@@ -5,6 +5,7 @@
              xmlns:views="clr-namespace:GUI.Views"
              xmlns:local="clr-namespace:GUI"
              StartupUri="MainWindow.xaml">
+    <!-- All view models are assigned here for Navigation between screens-->
     <Application.Resources>
         <DataTemplate DataType="{x:Type viewModels:UsersViewModel}">
             <views:Users/>

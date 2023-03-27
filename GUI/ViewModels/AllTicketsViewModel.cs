@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace GUI.ViewModels
 {
+    /// <summary>
+    /// ViewModel for All Tickets Screen
+    /// </summary>
     public class AllTicketsViewModel : BaseViewModel
     {
         public List<Ticket> tickets { get; set; }
@@ -15,6 +18,7 @@ namespace GUI.ViewModels
         {
             using (FrontEndManager.TicketManager manager = new FrontEndManager.TicketManager())
             {
+                // Fetch data by calling Front End Manager class
                 tickets = manager.GetTickets().GetResponseData();
             }
         }

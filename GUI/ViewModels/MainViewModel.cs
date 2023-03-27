@@ -8,6 +8,9 @@ using System.Windows.Input;
 
 namespace GUI.ViewModels
 {
+    /// <summary>
+    /// ViewModel for MainWindow screen
+    /// </summary>
     public class MainViewModel : BaseViewModel
     {
         private BaseViewModel _selectedViewModel;
@@ -21,8 +24,10 @@ namespace GUI.ViewModels
             }
         }
 
+        // Relay Command Pattern implementation
         public ICommand UpdateViewCommand { get; set; }
 
+        // Command initialization
         public MainViewModel()
         {
             UpdateViewCommand = new UpdateViewCommand(this);
